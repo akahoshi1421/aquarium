@@ -1,0 +1,16 @@
+@for $i from 1 to 50 {
+    img:nth-child(#{$i}){
+        position: absolute;
+        animation: 5s ugoku#{$i} infinite ease;
+    }
+
+    @keyframes ugoku#{$i} {
+        0%{
+            transform: translate(0%, 0%);
+        }
+        100%{
+            transform: translate(calc(3 * #{$i}0%), 100%);
+        }
+    }
+}
+
